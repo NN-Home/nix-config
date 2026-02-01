@@ -114,7 +114,7 @@ jobs:
       - name: Build previous ${{ matrix.host }} system
         run: |
           nix build \
-            "github:nnmavy/nix-config#top.${{ matrix.host }}" \
+            "github:nn-home/nix-config#top.${{ matrix.host }}" \
             --system ${{ matrix.system }} \
             --log-format raw \
             --fallback \
