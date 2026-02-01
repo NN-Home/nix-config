@@ -9,7 +9,7 @@ let
   hashData = lib.importJSON ./_sources/vendorhash.json;
   packageData = sourceData.talosctl;
 in
-pkgs.unstable.buildGo124Module {
+pkgs.unstable.buildGoModule {
   inherit (packageData) pname src;
   version = lib.strings.removePrefix "v" packageData.version;
   vendorHash = hashData.talosctl;

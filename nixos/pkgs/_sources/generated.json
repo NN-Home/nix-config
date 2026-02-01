@@ -1,6 +1,6 @@
 {
     "adguard-exporter": {
-        "cargoLock": null,
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "adguard-exporter",
@@ -21,7 +21,7 @@
         "version": "v1.2.1"
     },
     "chrony-exporter": {
-        "cargoLock": null,
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "chrony-exporter",
@@ -42,8 +42,8 @@
         "version": "v0.12.3"
     },
     "cockpit-podman": {
-        "cargoLock": null,
-        "date": "2026-01-27",
+        "cargoLocks": null,
+        "date": "2026-01-29",
         "extract": null,
         "name": "cockpit-podman",
         "passthru": null,
@@ -55,15 +55,15 @@
             "name": null,
             "owner": "cockpit-project",
             "repo": "cockpit-podman",
-            "rev": "ebe4e2f78c78d2cd7a46683898c82a96dfedd94f",
-            "sha256": "sha256-6XenDfMDzQDJddHJ1WIXS1J9NOEvL4MA/ZWgk54tctw=",
+            "rev": "9b5b3f3c37f8dadd761686ec50cc3f8e3a28b12c",
+            "sha256": "sha256-Fep6Vt0B17yZy5DUbWdZ981mTUX8GjSnuE8/eRV9nKs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "ebe4e2f78c78d2cd7a46683898c82a96dfedd94f"
+        "version": "9b5b3f3c37f8dadd761686ec50cc3f8e3a28b12c"
     },
     "flux-local": {
-        "cargoLock": null,
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "flux-local",
@@ -78,8 +78,8 @@
         "version": "8.1.0"
     },
     "gpsd-prometheus-exporter": {
-        "cargoLock": null,
-        "date": "2026-01-28",
+        "cargoLocks": null,
+        "date": "2026-01-30",
         "extract": null,
         "name": "gpsd-prometheus-exporter",
         "passthru": null,
@@ -91,15 +91,15 @@
             "name": null,
             "owner": "brendanbank",
             "repo": "gpsd-prometheus-exporter",
-            "rev": "add70f34648a6461d91a2be92aba46d9742d98b1",
+            "rev": "f501a1c8494ad7f4f29d0f2eb7ad8305a128ede3",
             "sha256": "sha256-7lLHy1eUlM1LNOySS8CEpd2LF1ii4QHftoxtBkM7n/o=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "add70f34648a6461d91a2be92aba46d9742d98b1"
+        "version": "f501a1c8494ad7f4f29d0f2eb7ad8305a128ede3"
     },
     "mqtt-explorer": {
-        "cargoLock": null,
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "mqtt-explorer",
@@ -120,7 +120,7 @@
         "version": "v0.3.5"
     },
     "npiperelay": {
-        "cargoLock": null,
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "npiperelay",
@@ -141,7 +141,7 @@
         "version": "v0.1.0"
     },
     "talosctl": {
-        "cargoLock": null,
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "talosctl",
