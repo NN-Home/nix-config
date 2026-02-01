@@ -18,7 +18,7 @@ with lib;
   };
   config.system.autoUpgrade = mkIf cfg.enable {
     enable = true;
-    flake = "github:NNMavy/nix-config";
+    flake = "github:NN-Home/nix-config";
     flags = [
       "-L" # print build logs
     ];

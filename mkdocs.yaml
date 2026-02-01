@@ -1,11 +1,11 @@
 ---
 site_name: Mavy's NixOS homelab
 site_author: NNMavy
-site_url: https://nnmavy.github.io/home-services/
+site_url: https://nnmavy.github.io/nix-config/
 
 # Repository
-repo_name: nnmavy/home-services
-repo_url: https://github.com/nnmavy/home-services
+repo_name: nn-home/nix-config
+repo_url: https://github.com/nn-home/nix-config
 
 docs_dir: ./docs
 site_dir: ./site
