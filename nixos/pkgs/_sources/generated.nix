@@ -30,15 +30,15 @@
   };
   cockpit-podman = {
     pname = "cockpit-podman";
-    version = "29eef5515a1e5e21ece02604198da6f724a14f85";
+    version = "759536d17ea68e87010de3b3740425427df4ca05";
     src = fetchFromGitHub {
       owner = "cockpit-project";
       repo = "cockpit-podman";
-      rev = "29eef5515a1e5e21ece02604198da6f724a14f85";
+      rev = "759536d17ea68e87010de3b3740425427df4ca05";
       fetchSubmodules = false;
-      sha256 = "sha256-SkZb8NcN8iSocVpdg4Y8KWNKfyBKn6HhYSO7kIcjxHw=";
+      sha256 = "sha256-ZF+qEO3KnkR3ULm+raY/gGhjDdEYA5l0l7q+S93ejLw=";
     };
-    date = "2026-03-17";
+    date = "2026-03-26";
   };
   flux-local = {
     pname = "flux-local";
@@ -50,15 +50,15 @@
   };
   gpsd-prometheus-exporter = {
     pname = "gpsd-prometheus-exporter";
-    version = "192050aeb24db92abe5e3229cdbca9199c6b9c42";
+    version = "1d85fa1d3e2af32a5b12d6067bffbd2af4442933";
     src = fetchFromGitHub {
       owner = "brendanbank";
       repo = "gpsd-prometheus-exporter";
-      rev = "192050aeb24db92abe5e3229cdbca9199c6b9c42";
+      rev = "1d85fa1d3e2af32a5b12d6067bffbd2af4442933";
       fetchSubmodules = false;
-      sha256 = "sha256-qDBwjzl/4EwKfMoaFKdFUHl9VK4PTFZCXTitH9UlEKE=";
+      sha256 = "sha256-QzWRX3UI+HTcO08jTXmw+k+wAjEofcIx9ZXl6A/dfX4=";
     };
-    date = "2026-03-10";
+    date = "2026-03-23";
   };
   mqtt-explorer = {
     pname = "mqtt-explorer";
@@ -84,13 +84,13 @@
   };
   talosctl = {
     pname = "talosctl";
-    version = "v1.12.5";
+    version = "v1.12.6";
     src = fetchFromGitHub {
       owner = "siderolabs";
       repo = "talos";
-      rev = "v1.12.5";
+      rev = "v1.12.6";
       fetchSubmodules = false;
-      sha256 = "sha256-mGfaf64he6/eK8JMHOCUSKaAEnsxoceYWDHhsD8WQ9Q=";
+      sha256 = "sha256-eVA2ZRCC3Lw4EvSHi0ohEoRHudpAi+Ps4zcIfXQWlGE=";
     };
   };
 }
