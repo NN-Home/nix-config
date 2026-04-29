@@ -43,7 +43,7 @@
     },
     "cockpit-podman": {
         "cargoLock": null,
-        "date": "2026-03-26",
+        "date": "2026-04-28",
         "extract": null,
         "name": "cockpit-podman",
         "passthru": null,
@@ -55,12 +55,12 @@
             "name": null,
             "owner": "cockpit-project",
             "repo": "cockpit-podman",
-            "rev": "759536d17ea68e87010de3b3740425427df4ca05",
-            "sha256": "sha256-ZF+qEO3KnkR3ULm+raY/gGhjDdEYA5l0l7q+S93ejLw=",
+            "rev": "9e7c2db94f863b5562d2c66ad7a5d77f407560db",
+            "sha256": "sha256-3VAdZ95yALTHZtMxWlNtEsBfjw/zlgBuZoPy/lF6ZFE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "759536d17ea68e87010de3b3740425427df4ca05"
+        "version": "9e7c2db94f863b5562d2c66ad7a5d77f407560db"
     },
     "flux-local": {
         "cargoLock": null,
@@ -71,15 +71,15 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-MotQ07wf/GQ3PsUrPU32I9bZ+Dti4D1nddBkDyu8k9I=",
+            "sha256": "sha256-w6Vdvs0Lybd7jjLfZQlDg3Da5OER3ATqhuAsH3OCN5k=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/flux_local/flux_local-8.1.0.tar.gz"
+            "url": "https://pypi.org/packages/source/f/flux_local/flux_local-8.2.0.tar.gz"
         },
-        "version": "8.1.0"
+        "version": "8.2.0"
     },
     "gpsd-prometheus-exporter": {
         "cargoLock": null,
-        "date": "2026-03-23",
+        "date": "2026-04-13",
         "extract": null,
         "name": "gpsd-prometheus-exporter",
         "passthru": null,
@@ -91,12 +91,12 @@
             "name": null,
             "owner": "brendanbank",
             "repo": "gpsd-prometheus-exporter",
-            "rev": "1d85fa1d3e2af32a5b12d6067bffbd2af4442933",
-            "sha256": "sha256-QzWRX3UI+HTcO08jTXmw+k+wAjEofcIx9ZXl6A/dfX4=",
+            "rev": "c00a4be4225be179e005ba64dacc8c773f912485",
+            "sha256": "sha256-ukILRs8XxUjXnRDE9Sdrph9La0GCKC8VeAIWRn0v0O8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1d85fa1d3e2af32a5b12d6067bffbd2af4442933"
+        "version": "c00a4be4225be179e005ba64dacc8c773f912485"
     },
     "mqtt-explorer": {
         "cargoLock": null,
@@ -154,11 +154,11 @@
             "name": null,
             "owner": "siderolabs",
             "repo": "talos",
-            "rev": "v1.12.6",
-            "sha256": "sha256-eVA2ZRCC3Lw4EvSHi0ohEoRHudpAi+Ps4zcIfXQWlGE=",
+            "rev": "v1.13.0",
+            "sha256": "sha256-dO4GBDhxsiuNn0lJl8RgFwUVxn34+Uks69Cm5J9zJsg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.12.6"
+        "version": "v1.13.0"
     }
 }
