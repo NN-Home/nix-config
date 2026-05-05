@@ -30,35 +30,35 @@
   };
   cockpit-podman = {
     pname = "cockpit-podman";
-    version = "759536d17ea68e87010de3b3740425427df4ca05";
+    version = "6a5429acf51384dcc3e5a9c9ce1741a9be56f65c";
     src = fetchFromGitHub {
       owner = "cockpit-project";
       repo = "cockpit-podman";
-      rev = "759536d17ea68e87010de3b3740425427df4ca05";
+      rev = "6a5429acf51384dcc3e5a9c9ce1741a9be56f65c";
       fetchSubmodules = false;
-      sha256 = "sha256-ZF+qEO3KnkR3ULm+raY/gGhjDdEYA5l0l7q+S93ejLw=";
+      sha256 = "sha256-1PEcYyLgy6p8RocICPNnvM9Hi6w8OzqpH+hZod6Q7v4=";
     };
-    date = "2026-03-26";
+    date = "2026-05-04";
   };
   flux-local = {
     pname = "flux-local";
-    version = "8.1.0";
+    version = "8.2.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/flux_local/flux_local-8.1.0.tar.gz";
-      sha256 = "sha256-MotQ07wf/GQ3PsUrPU32I9bZ+Dti4D1nddBkDyu8k9I=";
+      url = "https://pypi.org/packages/source/f/flux_local/flux_local-8.2.0.tar.gz";
+      sha256 = "sha256-w6Vdvs0Lybd7jjLfZQlDg3Da5OER3ATqhuAsH3OCN5k=";
     };
   };
   gpsd-prometheus-exporter = {
     pname = "gpsd-prometheus-exporter";
-    version = "1d85fa1d3e2af32a5b12d6067bffbd2af4442933";
+    version = "c00a4be4225be179e005ba64dacc8c773f912485";
     src = fetchFromGitHub {
       owner = "brendanbank";
       repo = "gpsd-prometheus-exporter";
-      rev = "1d85fa1d3e2af32a5b12d6067bffbd2af4442933";
+      rev = "c00a4be4225be179e005ba64dacc8c773f912485";
       fetchSubmodules = false;
-      sha256 = "sha256-QzWRX3UI+HTcO08jTXmw+k+wAjEofcIx9ZXl6A/dfX4=";
+      sha256 = "sha256-ukILRs8XxUjXnRDE9Sdrph9La0GCKC8VeAIWRn0v0O8=";
     };
-    date = "2026-03-23";
+    date = "2026-04-13";
   };
   mqtt-explorer = {
     pname = "mqtt-explorer";
@@ -84,13 +84,13 @@
   };
   talosctl = {
     pname = "talosctl";
-    version = "v1.12.6";
+    version = "v1.13.0";
     src = fetchFromGitHub {
       owner = "siderolabs";
       repo = "talos";
-      rev = "v1.12.6";
+      rev = "v1.13.0";
       fetchSubmodules = false;
-      sha256 = "sha256-eVA2ZRCC3Lw4EvSHi0ohEoRHudpAi+Ps4zcIfXQWlGE=";
+      sha256 = "sha256-dO4GBDhxsiuNn0lJl8RgFwUVxn34+Uks69Cm5J9zJsg=";
     };
   };
 }
