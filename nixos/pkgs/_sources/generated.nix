@@ -30,15 +30,15 @@
   };
   cockpit-podman = {
     pname = "cockpit-podman";
-    version = "3b51eab546b701e75ac09f2bac721a67f6e0fdc4";
+    version = "67ba358ef4e4c7cabd021ae406cf633ce98458bd";
     src = fetchFromGitHub {
       owner = "cockpit-project";
       repo = "cockpit-podman";
-      rev = "3b51eab546b701e75ac09f2bac721a67f6e0fdc4";
+      rev = "67ba358ef4e4c7cabd021ae406cf633ce98458bd";
       fetchSubmodules = false;
-      sha256 = "sha256-daNI3BIcoph+C7yC2N8PS04FLZAGgRf8hldIhcmlv6w=";
+      sha256 = "sha256-/sJoatsopitPaBr2BCzfXNnkm7iY8CkacpJhhjTZAhY=";
     };
-    date = "2026-05-17";
+    date = "2026-05-20";
   };
   flux-local = {
     pname = "flux-local";
