@@ -91,7 +91,7 @@ jobs:
             substituters = https://mavy.cachix.org https://cache.garnix.io https://cosmic.cachix.org/ https://nix-community.cachix.org https://numtide.cachix.org https://cache.nixos.org/
 
       - name: Setup Cloudflare Warp
-        uses: Boostport/setup-cloudflare-warp@427fc9c04f371e4e0338701954d495c669ae7885 # v1.17.1
+        uses: Boostport/setup-cloudflare-warp@2557ba84f68223c4642f8d65d1c7371666c5af34 # v1.18.0
         with:
           version: 2025.6.1335.0
           organization: ${{ secrets.CLOUDFLARE_ORGANIZATION }}
