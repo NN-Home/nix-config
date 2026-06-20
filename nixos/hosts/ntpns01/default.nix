@@ -32,12 +32,6 @@
       remote.enable = false;
     };
 
-  mySystem.system.autoUpgrade =
-    {
-      enable = true;
-      dates = "Wed 06:00";
-    };
-
   networking.hostName = "ntpns01"; # Define your hostname.
   networking.useDHCP = false;
 
@@ -49,7 +43,7 @@
           prefixLength = 24;
         }];
         ipv6.addresses = [{
-          address = "2a02:a472:e8b3:20::11";
+          address = "2a02:a469:59e0:20::11";
           prefixLength = 64;
         }];
       };
@@ -59,7 +53,7 @@
       address = "fe80::1";
       interface = "end0";
     };
-    nameservers = [ "2a02:a472:e8b3:20::11" "2a02:a472:e8b3:20::12" "172.16.20.11" "172.16.20.12" ];
+    nameservers = [ "2a02:a469:59e0:20::11" "2a02:a469:59e0:20::12" "172.16.20.11" "172.16.20.12" ];
   };
 
   fileSystems = {
