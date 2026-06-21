@@ -19,7 +19,7 @@ let
   #persistentFolder = "${config.mySystem.persistentFolder}/var/lib/${appFolder}";
   host = "${app}" + (if cfg.dev then "-dev" else "");
   url = "${app}.${config.networking.domain}";
-  old_url = "gitea.${config.networking.domain}";
+  new_url = "git.${config.networking.domain}";
 
 in
 {
@@ -105,8 +105,8 @@ in
       lfs.enable = true;
       settings = {
         server = {
-          DOMAIN = "${url}";
-          ROOT_URL = "https://${url}/";
+          DOMAIN = "${new_url}";
+          ROOT_URL = "https://${new_url}/";
           HTTP_PORT = port;
           MINIMUM_KEY_SIZE_CHECK = false;
           #SSH_PORT = head config.services.openssh.ports;
@@ -154,7 +154,7 @@ in
       {
         name = app;
         group = "${category}";
-        url = "https://${url}";
+        url = "https://${new_url}";
         interval = "1m";
         ui = {
           hide-hostname = true;
@@ -165,7 +165,7 @@ in
     ];
 
     ### Ingress
-    services.nginx.virtualHosts.${url} = {
+    services.nginx.virtualHosts.${new_url} = {
       forceSSL = true;
       useACMEHost = config.networking.domain;
       locations."^~ /" = {
@@ -174,10 +174,10 @@ in
       };
     };
     ### Redirect for old hostname
-    services.nginx.virtualHosts.${old_url} = {
+    services.nginx.virtualHosts.${url} = {
       forceSSL = true;
       useACMEHost = config.networking.domain;
-      globalRedirect = "${url}";
+      globalRedirect = "${new_url}";
     };
 
     ### firewall config

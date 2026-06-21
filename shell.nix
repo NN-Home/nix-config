@@ -11,7 +11,9 @@
 
 
   in
-  import nixpkgs { inherit system overlays; }
+  import nixpkgs { 
+    inherit system overlays; 
+  }
 , ...
 }:
 let
@@ -37,6 +39,7 @@ pkgs.mkShell {
 
   nativeBuildInputs = with pkgs; [
     nix
+    nix-output-monitor
     home-manager
     git
     nil
@@ -48,6 +51,7 @@ pkgs.mkShell {
     mkdocs
     mqttui
     act
+    attic-client
 
   ];
 }
