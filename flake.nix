@@ -226,37 +226,6 @@
             ];
           };
 
-          "mavy-wsl" = mkNixosConfig {
-            # NixOS wsl
-            hostname = "mavy-wsl";
-            system = "x86_64-linux";
-            hardwareModules = [
-              ./nixos/profiles/hw-wsl-x86.nix
-            ];
-            profileModules = [
-              ./nixos/profiles/role-wsl.nix
-              ./nixos/profiles/role-dev.nix
-              { home-manager.users.mavy = ./nixos/home/mavy/wsl.nix; }
-
-
-            ];
-          };
-
-          "optimus" = mkNixosConfig {
-            # Framework
-            hostname = "optimus";
-            system = "x86_64-linux";
-            hardwareModules = [
-              ./nixos/profiles/hw-framework13-x86.nix
-            ];
-            profileModules = [
-              ./nixos/profiles/role-workstation.nix
-              ./nixos/profiles/role-dev.nix
-              {
-                home-manager.users.mavy = ./nixos/home/mavy/workstation.nix;
-              }
-            ];
-          };
 
           "ntpns01" = mkNixosConfig {
             # Rpi for DNS and GPSNTP
