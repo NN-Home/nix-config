@@ -37,7 +37,7 @@
 
     # nix-community hardware quirks
     # https://github.com/nix-community
-    nixos-hardware.url = "github:NixOS/nixos-hardware/3bcaa367d4c550d687a17ac792fd5cda214ee871";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/875776f0252fcb8618bb948640a0d1f7a5b362be";
 
     # home-manager - home user+dotfile manager
     # https://github.com/nix-community/home-manager
