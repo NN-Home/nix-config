@@ -1,5 +1,5 @@
 {
-  "talosctl": "",
+  "talosctl": "sha256-LzeqtIMVDLIw1QjWPoAqFoyGEB8xpMHHy+1RG33ua6M=",
   "chrony-exporter": "sha256-nOu4t4Dchw+TXqfIY0B50zalo2ZhPWkoOeQ5MgbljMU=",
   "adguard-exporter": "sha256-fDSR0+INsVBD5XauPdSETMNJZkrIbpKwZ/6Tb2Po4fY=",
   "cockpit-podman": "",
