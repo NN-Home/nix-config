@@ -40,6 +40,15 @@ in
         dnsResolver = "1.1.1.1:53";
         credentialsFile = config.sops.secrets."security/acme/env".path;
       };
+      certs."codewalker.dev" = {
+        extraDomainNames = [
+          "codewalker.dev"
+          "*.codewalker.dev"
+        ];
+        dnsProvider = "ovh";
+        dnsResolver = "1.1.1.1:53";
+        credentialsFile = config.sops.secrets."security/acme/env".path;
+      };
     };
 
 

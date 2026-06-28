@@ -20,6 +20,7 @@ let
   host = "${app}" + (if cfg.dev then "-dev" else "");
   url = "${app}.${config.networking.domain}";
   new_url = "git.${config.networking.domain}";
+  extra_url = "git.codewalker.dev";
 
 in
 {
@@ -168,6 +169,14 @@ in
     services.nginx.virtualHosts.${new_url} = {
       forceSSL = true;
       useACMEHost = config.networking.domain;
+      locations."^~ /" = {
+        proxyPass = "http://127.0.0.1:${builtins.toString port}";
+        extraConfig = "resolver 10.88.0.1;";
+      };
+    };
+    services.nginx.virtualHosts.${extra_url} = {
+      forceSSL = true;
+      useACMEHost = "codewalker.dev";
       locations."^~ /" = {
         proxyPass = "http://127.0.0.1:${builtins.toString port}";
         extraConfig = "resolver 10.88.0.1;";
