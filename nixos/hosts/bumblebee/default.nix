@@ -31,6 +31,7 @@
         forgejo.enable = true;
         atlas-probe.enable = true;
         homebox.enable = true;
+        towonel.enable = true;
       };
 
       security.acme.enable = true;

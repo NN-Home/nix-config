@@ -3,5 +3,6 @@
     ./atlas-probe
     ./backrest
     ./gatus
+    ./towonel
   ];
 }
