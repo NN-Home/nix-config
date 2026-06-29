@@ -151,7 +151,7 @@ in
         DIFFICULTY = "4";
         METRICS_BIND = ":9090";
         SERVE_ROBOTS_TXT = "true";
-        TARGET = "http://127.0.0.1:${builtins.toString port}";
+        TARGET = "http://10.88.0.1:${builtins.toString port}";
         POLICY_FNAME = "/etc/anubis/policy.yaml";
         OG_PASSTHROUGH = "true";
         OG_EXPIRY_TIME = "24h";
@@ -182,7 +182,7 @@ in
       forceSSL = true;
       useACMEHost = config.networking.domain;
       locations."^~ /" = {
-        proxyPass = "http://127.0.0.1:${builtins.toString port}";
+        proxyPass = "http://anubis-${app}:${builtins.toString port}";
         extraConfig = "resolver 10.88.0.1;";
       };
     };
