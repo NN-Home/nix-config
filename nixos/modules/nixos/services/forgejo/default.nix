@@ -190,7 +190,7 @@ in
       forceSSL = true;
       useACMEHost = "codewalker.dev";
       locations."^~ /" = {
-        proxyPass = "http://anubis-${app}:9000";
+        proxyPass = "http://anubis-${app}:${builtins.toString 9000}";
         extraConfig = "resolver 10.88.0.1;";
       };
     };
