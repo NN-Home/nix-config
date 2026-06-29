@@ -41,6 +41,9 @@ in
       user = forgejo-user;
       group = forgejo-user;
       addToHomepage = mkEnableOption "Add ${app} to homepage" // { default = true; };
+      openFirewall = mkEnableOption "Open firewall for ${app}" // {
+        default = true;
+      };
       monitor = mkOption
         {
           type = lib.types.bool;
