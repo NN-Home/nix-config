@@ -206,7 +206,10 @@ in
     ### firewall config
 
     networking.firewall = mkIf cfg.openFirewall {
-      allowedTCPPorts = [ port ];
+      # allowedTCPPorts = [ port ];
+      extraCommands = ''
+        iptables -A nixos-fw -p tcp -d 10.88.0.1  --dport 3000 -j nixos-fw-accept
+      '';
     };
 
     ### backups
