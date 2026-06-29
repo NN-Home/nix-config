@@ -145,7 +145,6 @@ in
     ### Anubis Deployment
     virtualisation.oci-containers.containers."anubis-${app}" = {
       image = "ghcr.io/techarohq/anubis:v1.25.0";
-      # user = "${user}:${group}";
       environment = {
         BIND = ":9000";
         DIFFICULTY = "4";
@@ -203,10 +202,9 @@ in
 
     ### firewall config
 
-    # networking.firewall = mkIf cfg.openFirewall {
-    #   allowedTCPPorts = [ port ];
-    #   allowedUDPPorts = [ port ];
-    # };
+    networking.firewall = mkIf cfg.openFirewall {
+      allowedTCPPorts = [ port ];
+    };
 
     ### backups
     warnings = [
