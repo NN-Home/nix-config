@@ -22,6 +22,17 @@ let
   new_url = "git.${config.networking.domain}";
   extra_url = "git.codewalker.dev";
 
+  policyTxt = pkgs.writeText "policy.yaml" ''
+    bots:
+    - import: (data)/apps/gitea-rss-feeds.yaml
+    - import: (data)/clients/git.yaml
+    - import: (data)/clients/docker-client.yaml
+    - name: allow-api
+      path_regex: ^/api/.*
+      action: ALLOW
+    - import: (data)/meta/default-config.yaml
+  '';
+
 in
 {
   options.mySystem.${category}.${app} =
@@ -66,14 +77,6 @@ in
     };
 
   config = mkIf cfg.enable {
-
-    ## Secrets
-    # sops.secrets."${category}/${app}/env" = {
-    #   sopsFile = ./secrets.sops.yaml;
-    #   owner = user;
-    #   group = group;
-    #   restartUnits = [ "${app}.service" ];
-    # };
 
     users.users.${forgejo-user} = {
       home = config.services.forgejo.stateDir;
@@ -139,16 +142,25 @@ in
       };
     };
 
-    # # homepage integration
-    # mySystem.services.homepage.infrastructure = mkIf cfg.addToHomepage [
-    #   {
-    #     ${app} = {
-    #       icon = "${app}.svg";
-    #       href = "https://${url}";
-    #       inherit description;
-    #     };
-    #   }
-    # ];
+    ### Anubis Deployment
+    virtualisation.oci-containers.containers."anubis-${app}" = {
+      image = "ghcr.io/techarohq/anubis:v1.25.0";
+      # user = "${user}:${group}";
+      environment = {
+        BIND = ":9000";
+        DIFFICULTY = "4";
+        METRICS_BIND = ":9090";
+        SERVE_ROBOTS_TXT = "true";
+        TARGET = "http://127.0.0.1:${builtins.toString port}";
+        POLICY_FNAME = "/etc/anubis/policy.yaml";
+        OG_PASSTHROUGH = "true";
+        OG_EXPIRY_TIME = "24h";
+      };
+      volumes = [
+        "${policyTxt}:/etc/anubis/policy.yaml"
+        "/etc/localtime:/etc/localtime:ro"
+      ];
+    };
 
     ### gatus integration
     mySystem.services.gatus.monitors = mkIf cfg.monitor [
@@ -178,7 +190,7 @@ in
       forceSSL = true;
       useACMEHost = "codewalker.dev";
       locations."^~ /" = {
-        proxyPass = "http://127.0.0.1:${builtins.toString port}";
+        proxyPass = "http://127.0.0.1:9000";
         extraConfig = "resolver 10.88.0.1;";
       };
     };
