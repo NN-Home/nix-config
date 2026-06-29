@@ -182,7 +182,7 @@ in
       forceSSL = true;
       useACMEHost = config.networking.domain;
       locations."^~ /" = {
-        proxyPass = "http://anubis-${app}:${builtins.toString port}";
+        proxyPass = "http://127.0.0.1:${builtins.toString port}";
         extraConfig = "resolver 10.88.0.1;";
       };
     };
@@ -190,7 +190,7 @@ in
       forceSSL = true;
       useACMEHost = "codewalker.dev";
       locations."^~ /" = {
-        proxyPass = "http://127.0.0.1:9000";
+        proxyPass = "http://anubis-${app}:9000";
         extraConfig = "resolver 10.88.0.1;";
       };
     };
